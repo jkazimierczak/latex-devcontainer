@@ -6,6 +6,7 @@ Are you:
 - Hitting compile time limits?
 - Having your eyes burnt by looking at the theme/font you don't like?
 - Not able to track changes with Git?
+- Missing global cross-file search & replace, multicursors and all your other editor goodies?
 
 Dev Containers will be your friend then! This setup allows you to write your LaTeX documents from within a Dev Container. Recommended setup is [VS Code](https://code.visualstudio.com/) + [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
