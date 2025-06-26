@@ -24,6 +24,8 @@ You can use `git` as usual (almost). The dev container should already have your 
 
 The only caveat is that you might not be able to `git push` from within the container. In short, this requires additional setup, see the VS Code [docs](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials) about this. When using SSH keys for Git operations within the Dev Container, additional setup of [SSH agent forwarding](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials#_using-ssh-keys) is required. Refer to docs on how to do that.
 
+Once SSH agent forwarding is enabled, on the host add your key to the agent with `ssh-add <path_to_key>`, then verify the key is added with `ssh-add -l`. Once key is present in the agent, start your Dev Container. You can also verify that the key is accessible from within the container, again with `ssh-add -l`.
+
 The Dev Container's `Dockerfile` also includes [Git LFS](https://git-lfs.com/) for storing images/other non-text files more efficiently. Refer to said Git LFS page to learn more and configure it accordingly (it's easy and takes a minute). It's already configured for `*.png` (see `.gitattributes`).
 
 ---
