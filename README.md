@@ -1,9 +1,10 @@
 # LaTeX DevContainer
 
 Are you:
-- Writing a thesis in Overleaf? 
-- Hitting compile time limits? 
-- Having your eyes burnt by looking at the theme/font you don't like? 
+
+- Writing a thesis in Overleaf?
+- Hitting compile time limits?
+- Having your eyes burnt by looking at the theme/font you don't like?
 - Not able to track changes with Git?
 
 Dev Containers will be your friend then! This setup allows you to write your LaTeX documents from within a Dev Container. Recommended setup is [VS Code](https://code.visualstudio.com/) + [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
@@ -19,7 +20,9 @@ Optionally you can also copy `.vscode/settings.json`. It contains basic Overleaf
 
 ## Using Git
 
-You can use `git` as usual. The dev container should already have your `user.name` and `user.email` set, given these were configured on the host.
+You can use `git` as usual (almost). The dev container should already have your `.gitconfig` copied into container on startup (so no need to set `user.name` and `user.email` again). 
+
+The only caveat is that you might not be able to `git push` from within the container. In short, this requires additional setup, see the VS Code [docs](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials) about this. When using SSH keys for Git operations within the Dev Container, additional setup of [SSH agent forwarding](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials#_using-ssh-keys) is required. Refer to docs on how to do that.
 
 The Dev Container's `Dockerfile` also includes [Git LFS](https://git-lfs.com/) for storing images/other non-text files more efficiently. Refer to said Git LFS page to learn more and configure it accordingly (it's easy and takes a minute). It's already configured for `*.png` (see `.gitattributes`).
 

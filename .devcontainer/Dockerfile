@@ -29,8 +29,10 @@ RUN curl -L http://cpanmin.us | perl - App::cpanminus \
     && cpanm File::HomeDir \
     && cpanm Unicode::GCString
 
-# Install git-lfs
-RUN apt-get install --no-install-recommends -y git-lfs \
+# Install git-lfs & openssh for git
+RUN apt-get install --no-install-recommends -y \
+    git-lfs \
+    openssh-client \
     && git lfs install
 
 # Clean up
