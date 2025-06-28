@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM ubuntu:latest
+FROM ubuntu:25.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
@@ -28,6 +28,9 @@ RUN curl -L http://cpanmin.us | perl - App::cpanminus \
     && cpanm YAML::Tiny \
     && cpanm File::HomeDir \
     && cpanm Unicode::GCString
+
+# Install tex-fmt
+RUN apt-get install --no-install-recommends -y tex-fmt
 
 # Install git-lfs & openssh for git
 RUN apt-get install --no-install-recommends -y \

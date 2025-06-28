@@ -17,7 +17,12 @@ Dev Containers will be your friend then! This setup allows you to write your LaT
 3. Reopen your project with selecting `Remote-Containers: Reopen in Container` from VS Code Command Pallette (`CTRL+SHIFT+P`).
 4. Open any of your `.tex` files and click "Build" icon.
 
-Optionally you can also copy `.vscode/settings.json`. It contains basic Overleaf-like setup for compiling PDFs and hides some temporary files from the project navigation. It also configs the extension to rebuild output PDF on file save.
+Optionally you can also copy `.vscode/settings.json`. It contains:
+
+- basic Overleaf-like setup for compiling PDFs,
+- hides some temporary files from the project navigation,
+- configures the extension to recompile PDF on file save,
+- sets the default formatter to [`tex-fmt`](https://github.com/WGUNDERWOOD/tex-fmt).
 
 ## Using Git
 
@@ -27,7 +32,7 @@ The only caveat is that you might not be able to `git push` from within the cont
 
 Once SSH agent forwarding is enabled, on the host add your key to the agent with `ssh-add <path_to_key>`, then verify the key is added with `ssh-add -l`. Once key is present in the agent, start your Dev Container. You can also verify that the key is accessible from within the container, again with `ssh-add -l`.
 
-The Dev Container's `Dockerfile` also includes [Git LFS](https://git-lfs.com/) for storing images/other non-text files more efficiently. Refer to said Git LFS page to learn more and configure it accordingly (it's easy and takes a minute). It's already configured for `*.png` (see `.gitattributes`).
+The Dev Container's `Dockerfile` also includes [Git LFS](https://git-lfs.com/) for storing images/other non-text files more efficiently. Refer to said Git LFS page to learn more and configure it accordingly (it's easy and takes a minute). It's already configured for `*.jpg` and `*.png` (see `.gitattributes`).
 
 ---
 
