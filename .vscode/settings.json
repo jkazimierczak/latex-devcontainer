@@ -3,6 +3,7 @@
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.view.autoFocus.enabled": true,
   "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.formatting.latex": "tex-fmt",
   "latex-workshop.latex.recipes": [
     {
       "name": "pdfLaTeX",
